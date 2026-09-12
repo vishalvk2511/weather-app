@@ -1,7 +1,7 @@
 // Set this in a separate config file loaded before this script:
 // window.WEATHER_API_KEY = "your_visual_crossing_api_key";
 
-const API_KEY = window.WEATHER_API_KEY;
+const API_KEY = "83N7TDQ848H4PZDQV9MLVKSNJ";
 
 const form = document.getElementById("weather-form");
 const locationInput = document.getElementById("location-input");
@@ -17,10 +17,7 @@ const humidityElement = document.getElementById("humidity");
 const windElement = document.getElementById("wind");
 
 async function getWeather(location) {
-  if (!API_KEY) {
-    message.textContent = "Weather API key is not configured.";
-    return;
-  }
+  
 
   const encodedLocation = encodeURIComponent(location);
   const url =
